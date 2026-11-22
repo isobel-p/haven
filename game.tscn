@@ -66,6 +66,8 @@ scale = Vector2(1.3333333, 1.3333333)
 texture = ExtResource("2_feb5d")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1671795167]
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=958200858]
 
