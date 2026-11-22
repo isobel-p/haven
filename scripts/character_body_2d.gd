@@ -8,6 +8,7 @@ func respawn() -> void:
 	global_position.y = 0
 
 func _ready() -> void:
+	#$Error.play()
 	respawn()
 
 func _physics_process(delta: float) -> void:

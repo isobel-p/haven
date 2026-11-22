@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://umvjo50quqha" path="res://assets/Brick.jpg" id="8_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://pkq34yul836r" path="res://assets/Text.jpg" id="10_dinhu"]
 [ext_resource type="Texture2D" uid="uid://c4g5g7icfaidc" path="res://assets/Star.jpg" id="11_kvuet"]
+[ext_resource type="AudioStream" uid="uid://bf0bdgiri0wd" path="res://assets/ztmusic-zt-byte-blast-163367.mp3" id="12_dinhu"]
+[ext_resource type="Script" uid="uid://8y8qw652sp8g" path="res://scenes/star.gd" id="12_trtic"]
+[ext_resource type="AudioStream" uid="uid://ddq2nmm0lt4kn" path="res://assets/chisper-8-bit-error-buzz-634755.mp3" id="13_kvuet"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt5sy"]
 radius = 9.055386
@@ -46,6 +49,9 @@ sources/0 = SubResource("TileSetAtlasSource_j5wjh")
 sources/3 = SubResource("TileSetAtlasSource_eow3j")
 sources/2 = SubResource("TileSetAtlasSource_trtic")
 sources/5 = SubResource("TileSetAtlasSource_ir15t")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g5jk6"]
+size = Vector2(34.78102, 34.618507)
 
 [node name="Node2D" type="Node" unique_id=845635383]
 
@@ -192,6 +198,21 @@ tile_map_data = PackedByteArray("AAABAAMAAAAAAAAAADAiABEAAAAAAAAAAGAjABEAAAAAAAA
 tile_set = SubResource("TileSet_j7hea")
 
 [node name="Star" type="Sprite2D" parent="." unique_id=1823404316]
-position = Vector2(2281, 173)
+position = Vector2(2278, 195)
 scale = Vector2(6.1527777, 6.1527777)
 texture = ExtResource("11_kvuet")
+script = ExtResource("12_trtic")
+
+[node name="Area2D" type="Area2D" parent="Star" unique_id=484072652]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Star/Area2D" unique_id=475825659]
+position = Vector2(0, 0.40632057)
+shape = SubResource("RectangleShape2D_g5jk6")
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="." unique_id=548561520]
+stream = ExtResource("12_dinhu")
+autoplay = true
+parameters/looping = false
+
+[node name="Error" type="AudioStreamPlayer" parent="." unique_id=1980540705]
+stream = ExtResource("13_kvuet")
