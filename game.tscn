@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cwyw0e2npgmky" path="res://Enemy.jpg" id="6_ryrav"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt5sy"]
-radius = 12.0
+radius = 9.055386
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5wjh"]
 texture = ExtResource("4_ryrav")
