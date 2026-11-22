@@ -1,10 +1,9 @@
 [gd_scene format=4 uid="uid://bdljtg72p7ljc"]
 
 [ext_resource type="Texture2D" uid="uid://bf81oq12rnla6" path="res://assets/Table.jpg" id="1_7jktm"]
-[ext_resource type="Script" uid="uid://cdkivmcm0qs" path="res://character_body_2d.gd" id="2_fc0e3"]
+[ext_resource type="Script" uid="uid://cdkivmcm0qs" path="res://scripts/character_body_2d.gd" id="2_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://bqgao1x5k045b" path="res://paddle2.tscn" id="2_ryrav"]
-[ext_resource type="PackedScene" uid="uid://8k12gaxmjrak" path="res://paddle.tscn" id="4_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://iwn83jsfmhal" path="res://Raquet1.jpg" id="4_ryrav"]
 [ext_resource type="Texture2D" uid="uid://crrs8you66x3a" path="res://assets/Line.jpg" id="5_ryrav"]
 
@@ -36,8 +35,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_7jktm")
 stretch_mode = 1
-
-[node name="Paddle" parent="." unique_id=1594035442 instance=ExtResource("4_fc0e3")]
 
 [node name="Paddle2" parent="." unique_id=812565973 instance=ExtResource("2_ryrav")]
 
