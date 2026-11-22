@@ -93,10 +93,10 @@ position = Vector2(1064, 234)
 position = Vector2(1017, 192)
 
 [node name="Spike12" parent="." unique_id=1358197781 instance=ExtResource("2_eow3j")]
-position = Vector2(1194, 165)
+position = Vector2(1194, 190)
 
 [node name="Spike13" parent="." unique_id=1443509825 instance=ExtResource("2_eow3j")]
-position = Vector2(1242, 222)
+position = Vector2(1231, 222)
 
 [node name="Spike14" parent="." unique_id=1228365376 instance=ExtResource("2_eow3j")]
 position = Vector2(1279, 272)
@@ -120,7 +120,7 @@ position = Vector2(1447, 55)
 position = Vector2(1565, 67)
 
 [node name="Spike22" parent="." unique_id=952203893 instance=ExtResource("2_eow3j")]
-position = Vector2(1512, 191)
+position = Vector2(1558, 230)
 
 [node name="Big Paddle" parent="." unique_id=1004621300 instance=ExtResource("2_ryrav")]
 position = Vector2(1, 304)
