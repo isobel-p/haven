@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://bdljtg72p7ljc"]
 
+[ext_resource type="Texture2D" uid="uid://bf81oq12rnla6" path="res://assets/Table.jpg" id="1_7jktm"]
 [ext_resource type="Script" uid="uid://cdkivmcm0qs" path="res://character_body_2d.gd" id="2_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://8k12gaxmjrak" path="res://paddle.tscn" id="4_fc0e3"]
@@ -18,6 +19,9 @@ texture_region_size = Vector2i(20, 20)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_j5wjh")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgyqk"]
+size = Vector2(574, 1.0264363)
+
 [node name="Node2D" type="Node" unique_id=845635383]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=611853722]
@@ -29,6 +33,7 @@ offset_right = -576.0
 offset_bottom = -324.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("1_7jktm")
 stretch_mode = 1
 
 [node name="Paddle" parent="." unique_id=1594035442 instance=ExtResource("4_fc0e3")]
@@ -55,11 +60,15 @@ use_parent_material = true
 tile_map_data = PackedByteArray("AAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAFABAAMAAAAAAAAAADAAAAMAAAAAAAAAAGADAAMAAAAAAAAAAGADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAFAEAAMAAAAAAAAAADAHAAMAAAAAAAAAADAGAAMAAAAAAAAAAGAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAFAJAAUAAAAAAAAAAFAIAAUAAAAAAAAAAAAIAAYAAAAAAAAAAGAJAAYAAAAAAAAAADANAAkAAAAAAAAAADANAAgAAAAAAAAAAFAMAAgAAAAAAAAAAAAMAAkAAAAAAAAAAGAOAA0AAAAAAAAAAAAPAA0AAAAAAAAAAFAPAA4AAAAAAAAAADAOAA4AAAAAAAAAAGAZABEAAAAAAAAAAAAaABEAAAAAAAAAAFAaABIAAAAAAAAAADAZABIAAAAAAAAAAGAaAAsAAAAAAAAAAGAaAAoAAAAAAAAAAAAbAAoAAAAAAAAAAFAbAAsAAAAAAAAAADAcAAQAAAAAAAAAADAcAAMAAAAAAAAAAFAbAAMAAAAAAAAAAAAbAAQAAAAAAAAAAGA=")
 tile_set = SubResource("TileSet_j7hea")
 
-[node name="Line" type="Sprite2D" parent="." unique_id=629638475]
-position = Vector2(292, 161.5)
-scale = Vector2(0.96666664, 21.666668)
-
-[node name="Line2" type="Sprite2D" parent="." unique_id=1953201802]
+[node name="Line" type="Sprite2D" parent="." unique_id=1953201802]
 position = Vector2(290, 163.25)
 scale = Vector2(1, 21.433332)
 texture = ExtResource("5_ryrav")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=576443871]
+position = Vector2(290, 163.25)
+scale = Vector2(1, 21.433332)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429111834]
+position = Vector2(-3, 8.4331255)
+shape = SubResource("RectangleShape2D_pgyqk")
