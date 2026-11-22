@@ -1,7 +1,7 @@
 extends AnimatableBody2D
 
 var reset_x: int = 0
-var speed: int = 10
+var speed: int = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,9 +15,9 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	print(position.x)
 	if position.x>300:
-		speed = -10
+		speed = -2
 	elif position.x<0:
-		speed = 10
+		speed = 2
 	position.x += speed
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

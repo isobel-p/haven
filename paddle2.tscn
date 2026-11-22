@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b7vuf23ogna00" path="res://scripts/paddle2.gd" id="1_bm8fl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7i1h"]
-size = Vector2(265, 47)
+size = Vector2(109.25, 22)
 
 [node name="Paddle2" type="Node2D" unique_id=812565973]
 
@@ -11,17 +11,17 @@ size = Vector2(265, 47)
 script = ExtResource("1_bm8fl")
 
 [node name="ColorRect" type="ColorRect" parent="AnimatableBody2D" unique_id=1547809541]
-offset_right = 255.0
-offset_bottom = 40.0
+offset_right = 101.0
+offset_bottom = 14.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=1677371640]
-position = Vector2(127, 20)
+position = Vector2(49.75, 7.25)
 shape = SubResource("RectangleShape2D_i7i1h")
 
 [node name="Area2D" type="Area2D" parent="AnimatableBody2D" unique_id=1283164990]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="AnimatableBody2D/Area2D" unique_id=1354610395]
-position = Vector2(126.5, 19.5)
+position = Vector2(51.375, 6)
 shape = SubResource("RectangleShape2D_i7i1h")
 
 [connection signal="body_entered" from="AnimatableBody2D/Area2D" to="AnimatableBody2D" method="_on_area_2d_body_entered"]
