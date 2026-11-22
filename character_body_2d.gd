@@ -32,3 +32,4 @@ func _physics_process(delta: float) -> void:
 
 func on_powerup():
 	print("powerup")
+	
