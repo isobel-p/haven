@@ -1,0 +1,42 @@
+extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+var jumps: int = 2
+
+func _ready() -> void:
+	global_position.x = 100
+	global_position.y = -100
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed("jump") and jumps > 0:
+		velocity.y = JUMP_VELOCITY
+		jumps -= 1
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis("left", "right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	if position.y > 300:
+		position.x = 0
+		position.y = 0
+
+
+	move_and_slide()
+
+func on_powerup():
+	print("powerup")
+<<<<<<< HEAD:character_body_2d.gd
+	
+=======
+>>>>>>> 861a1efc7ff10300c3a585ab4919b007eb09b293:scripts/character_body_2d.gd
