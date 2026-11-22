@@ -20,7 +20,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_j5wjh")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pgyqk"]
-size = Vector2(574, 1.0264363)
+size = Vector2(574, 8.911352)
 
 [node name="Node2D" type="Node" unique_id=845635383]
 
@@ -76,5 +76,5 @@ position = Vector2(290, 163.25)
 scale = Vector2(1, 21.433332)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429111834]
-position = Vector2(-3, 8.4331255)
+position = Vector2(-3, 12.375583)
 shape = SubResource("RectangleShape2D_pgyqk")
