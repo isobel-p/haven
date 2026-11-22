@@ -186,6 +186,11 @@ position_smoothing_speed = 1.0
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/Area2D" unique_id=849772115]
 shape = SubResource("CircleShape2D_yt5sy")
 
+[node name="Error" type="AudioStreamPlayer" parent="Player" unique_id=1980540705]
+unique_name_in_owner = true
+stream = ExtResource("13_kvuet")
+volume_db = 4.837
+
 [node name="TileMap" type="TileMap" parent="." unique_id=1354107092]
 position = Vector2(1, -1)
 tile_set = SubResource("TileSet_j7hea")
@@ -213,8 +218,5 @@ shape = SubResource("RectangleShape2D_g5jk6")
 stream = ExtResource("12_dinhu")
 autoplay = true
 parameters/looping = false
-
-[node name="Error" type="AudioStreamPlayer" parent="." unique_id=1980540705]
-stream = ExtResource("13_kvuet")
 
 [connection signal="body_entered" from="Star/Area2D" to="Star" method="_on_area_2d_body_entered"]

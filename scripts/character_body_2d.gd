@@ -1,14 +1,15 @@
 extends CharacterBody2D
 
+
 var jumps: int = 2
 
 func respawn() -> void:
+	$Error.play()
 	print("Respawning...")
 	global_position.x = 17.5
 	global_position.y = 0
 
 func _ready() -> void:
-	#$Error.play()
 	respawn()
 
 func _physics_process(delta: float) -> void:
