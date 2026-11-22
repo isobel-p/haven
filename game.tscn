@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://bdljtg72p7ljc"]
 
-[ext_resource type="Texture2D" path="res://Table.jpg" id="1_7jktm"]
 [ext_resource type="Script" uid="uid://cdkivmcm0qs" path="res://character_body_2d.gd" id="2_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_feb5d"]
+[ext_resource type="PackedScene" uid="uid://8k12gaxmjrak" path="res://paddle.tscn" id="4_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://iwn83jsfmhal" path="res://Raquet1.jpg" id="4_ryrav"]
-[ext_resource type="Texture2D" path="res://Line.jpg" id="5_eow3j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt5sy"]
 
@@ -29,8 +28,9 @@ offset_right = -576.0
 offset_bottom = -324.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_7jktm")
 stretch_mode = 1
+
+[node name="Paddle" parent="." unique_id=1594035442 instance=ExtResource("4_fc0e3")]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=186802152]
 script = ExtResource("2_fc0e3")
@@ -53,4 +53,3 @@ layer_0/tile_data = PackedInt32Array(131072, 0, 0, 131073, 0, 1342177280, 196609
 [node name="Line" type="Sprite2D" parent="." unique_id=629638475]
 position = Vector2(292, 161.5)
 scale = Vector2(0.96666664, 21.666668)
-texture = ExtResource("5_eow3j")
