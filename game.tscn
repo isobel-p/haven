@@ -41,7 +41,10 @@ grow_vertical = 2
 texture = ExtResource("1_7jktm")
 stretch_mode = 1
 
-[node name="Paddle2" parent="." unique_id=812565973 instance=ExtResource("2_ryrav")]
+[node name="Big Paddle" parent="." unique_id=812565973 instance=ExtResource("2_ryrav")]
+position = Vector2(1, 304)
+
+[node name="Medium Paddle" parent="." unique_id=763567287 instance=ExtResource("2_ryrav")]
 position = Vector2(1, 304)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=186802152]
