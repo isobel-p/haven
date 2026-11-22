@@ -4,10 +4,6 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-var max_jumps: int = 3
-var jumps: int = max_jumps
-@onready var bar = $Jumps
-
 func _ready() -> void:
 	global_position.x = 100
 	global_position.y = -100
@@ -16,15 +12,10 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	else:
-		jumps = max_jumps
-		bar.update_jumps()
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and jumps > 0:
+	if Input.is_action_just_pressed("jump"):
 		velocity.y = JUMP_VELOCITY
-		jumps -= 1
-		bar.update_jumps()
 		
 
 	# Get the input direction and handle the movement/deceleration.
@@ -43,5 +34,3 @@ func _physics_process(delta: float) -> void:
 
 func on_powerup():
 	print("powerup")
-	max_jumps += 1
-	jumps = max_jumps
