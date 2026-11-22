@@ -33,7 +33,7 @@ texture = ExtResource("1_7jktm")
 stretch_mode = 1
 
 [node name="Paddle2" parent="." unique_id=812565973 instance=ExtResource("2_ryrav")]
-position = Vector2(125, 303)
+position = Vector2(1, 304)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=186802152]
 script = ExtResource("2_fc0e3")

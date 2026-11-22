@@ -3,8 +3,8 @@ extends CharacterBody2D
 var jumps: int = 2
 
 func _ready() -> void:
-	global_position.x = 100
-	global_position.y = -100
+	global_position.x = 0
+	global_position.y = 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 		#jumps = 2
 
 	## Handle jump.
-	#if Input.is_action_just_pressed("jump") and jumps > 0:
+	##if Input.is_action_just_pressed("jump") and jumps > 0:
 		#velocity.y = -400
 		#jumps -= 1
 
