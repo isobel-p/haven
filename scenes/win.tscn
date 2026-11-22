@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://mxboqfi1aml3"]
 
+[ext_resource type="Texture2D" uid="uid://djkf5do1iauym" path="res://assets/Trophy.jpg" id="1_r4oei"]
+
 [node name="Win" type="Node2D" unique_id=2037631507]
+
+[node name="Trophy" type="Sprite2D" parent="." unique_id=1508838133]
+position = Vector2(539, 323.99997)
+scale = Vector2(12.021276, 11.175438)
+texture = ExtResource("1_r4oei")
