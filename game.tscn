@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://384spmua6cy2"]
 
-[ext_resource type="Texture2D" uid="uid://bf81oq12rnla6" path="res://Table.jpg" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://bf81oq12rnla6" path="res://assets/Table.jpg" id="1_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_feb5d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt5sy"]
 
@@ -12,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_80nbo")
+texture = ExtResource("1_e2o6t")
 stretch_mode = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=186802152]
@@ -21,3 +22,6 @@ stretch_mode = 1
 shape = SubResource("CircleShape2D_yt5sy")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=974702919]
+position = Vector2(3.5762787e-07, 3.5762787e-07)
+scale = Vector2(1.3333333, 1.3333333)
+texture = ExtResource("2_feb5d")
