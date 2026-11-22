@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://384spmua6cy2"]
 
-[ext_resource type="Texture2D" path="res://assets/Table.jpg" id="1_e2o6t"]
-[ext_resource type="Script" uid="uid://cdkivmcm0qs" path="res://character_body_2d.gd" id="2_fc0e3"]
-[ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_feb5d"]
+[ext_resource type="Script" uid="uid://dhmjdesuqqnj" path="res://paddle.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_i3pqv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt5sy"]
 
@@ -14,11 +13,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_e2o6t")
 stretch_mode = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=186802152]
-script = ExtResource("2_fc0e3")
+script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1732930530]
 shape = SubResource("CircleShape2D_yt5sy")
@@ -26,6 +24,7 @@ shape = SubResource("CircleShape2D_yt5sy")
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=974702919]
 position = Vector2(3.5762787e-07, 3.5762787e-07)
 scale = Vector2(1.3333333, 1.3333333)
-texture = ExtResource("2_feb5d")
+texture = ExtResource("2_i3pqv")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1671795167]
+position_smoothing_enabled = true
