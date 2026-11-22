@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://bqgao1x5k045b" path="res://paddle2.tscn" id="2_ryrav"]
 [ext_resource type="Texture2D" uid="uid://iwn83jsfmhal" path="res://Raquet1.jpg" id="4_ryrav"]
+[ext_resource type="Texture2D" uid="uid://f34dxuehaoej" path="res://Enemy.jpg" id="6_ryrav"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt5sy"]
 
@@ -14,9 +15,16 @@ texture_region_size = Vector2i(20, 20)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eow3j"]
+texture = ExtResource("6_ryrav")
+texture_region_size = Vector2i(18, 18)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
 [sub_resource type="TileSet" id="TileSet_j7hea"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_j5wjh")
+sources/3 = SubResource("TileSetAtlasSource_eow3j")
 
 [node name="Node2D" type="Node" unique_id=845635383]
 
@@ -24,9 +32,10 @@ sources/0 = SubResource("TileSetAtlasSource_j5wjh")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -1.0
+offset_left = -4.0
+offset_top = -3.0
 offset_right = 848.0
-offset_bottom = -324.0
+offset_bottom = -318.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_7jktm")
@@ -56,6 +65,7 @@ shape = SubResource("CircleShape2D_yt5sy")
 position = Vector2(1, -1)
 tile_set = SubResource("TileSet_j7hea")
 format = 2
+layer_0/tile_data = PackedInt32Array(458762, 3, 0, 458763, 3, 1342177280, 524299, 3, 805306368, 524298, 3, 1610612736, 851983, 3, 1610612736, 786447, 3, 0, 786448, 3, 1342177280, 851984, 3, 805306368, 786458, 3, 805306368, 786457, 3, 1610612736, 720921, 3, 0, 720922, 3, 1342177280)
 
 [node name="Layer1" type="TileMapLayer" parent="TileMap" unique_id=339631563]
 use_parent_material = true
