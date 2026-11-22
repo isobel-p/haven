@@ -5,8 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://bqgao1x5k045b" path="res://paddle2.tscn" id="2_ryrav"]
 [ext_resource type="Texture2D" uid="uid://iwn83jsfmhal" path="res://Raquet1.jpg" id="4_ryrav"]
-[ext_resource type="Texture2D" uid="uid://crrs8you66x3a" path="res://assets/Line.jpg" id="5_ryrav"]
-[ext_resource type="Texture2D" uid="uid://bat22m584w1yi" path="res://Flag.jpg" id="6_eow3j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt5sy"]
 
@@ -19,9 +17,6 @@ texture_region_size = Vector2i(20, 20)
 [sub_resource type="TileSet" id="TileSet_j7hea"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_j5wjh")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgyqk"]
-size = Vector2(574, 8.911352)
 
 [node name="Node2D" type="Node" unique_id=845635383]
 
@@ -38,7 +33,7 @@ texture = ExtResource("1_7jktm")
 stretch_mode = 1
 
 [node name="Paddle2" parent="." unique_id=812565973 instance=ExtResource("2_ryrav")]
-position = Vector2(411, 305)
+position = Vector2(125, 303)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=186802152]
 script = ExtResource("2_fc0e3")
@@ -64,22 +59,5 @@ format = 2
 
 [node name="Layer1" type="TileMapLayer" parent="TileMap" unique_id=339631563]
 use_parent_material = true
-tile_map_data = PackedByteArray("AAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAFABAAMAAAAAAAAAADAAAAMAAAAAAAAAAGADAAMAAAAAAAAAAGADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAFAEAAMAAAAAAAAAADAHAAMAAAAAAAAAADAGAAMAAAAAAAAAAGAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAFAJAAUAAAAAAAAAAFAIAAUAAAAAAAAAAAAIAAYAAAAAAAAAAGAJAAYAAAAAAAAAADANAAkAAAAAAAAAADANAAgAAAAAAAAAAFAMAAgAAAAAAAAAAAAMAAkAAAAAAAAAAGAiABEAAAAAAAAAAAAjABEAAAAAAAAAAFAjABIAAAAAAAAAADAiABIAAAAAAAAAAGAiAA8AAAAAAAAAAGAiAA4AAAAAAAAAAAAjAA4AAAAAAAAAAFAjAA8AAAAAAAAAADAjAAwAAAAAAAAAADAjAAsAAAAAAAAAAFAiAAsAAAAAAAAAAAAiAAwAAAAAAAAAAGAiAAYAAAAAAAAAAGAiAAUAAAAAAAAAAAAjAAUAAAAAAAAAAFAjAAYAAAAAAAAAADAjAAIAAAAAAAAAAFAjAAMAAAAAAAAAADAiAAMAAAAAAAAAAGAiAAIAAAAAAAAAAAAjAAAAAAAAAAAAAFAjAAEAAAAAAAAAADAiAAAAAAAAAAAAAAAiAAEAAAAAAAAAAGA=")
+tile_map_data = PackedByteArray("AAABAAMAAAAAAAAAADAiABEAAAAAAAAAAGAjABEAAAAAAAAAADAjABIAAAAAAAAAAFAiABIAAAAAAAAAAAAiAA8AAAAAAAAAAGAiAA4AAAAAAAAAAAAjAA4AAAAAAAAAAFAjAA8AAAAAAAAAADAjAAwAAAAAAAAAAFAiAAwAAAAAAAAAAAAiAAUAAAAAAAAAAGAjAAUAAAAAAAAAADAjAAIAAAAAAAAAAFAjAAMAAAAAAAAAADAiAAMAAAAAAAAAAGAiAAIAAAAAAAAAAAAjAAAAAAAAAAAAAFAjAAEAAAAAAAAAADAiAAEAAAAAAAAAAGAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAFAAAAMAAAAAAAAAAGAiAAAAAAAAAAAAAAAiAAQAAAAAAAAAAAAjAAQAAAAAAAAAAFAjABAAAAAAAAAAAFAiAA0AAAAAAAAAAGAiABMAAAAAAAAAAGAjABMAAAAAAAAAADAjAA0AAAAAAAAAADAiABAAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_j7hea")
-
-[node name="Line" type="Sprite2D" parent="." unique_id=1953201802]
-position = Vector2(290, 163.25)
-scale = Vector2(1, 21.433332)
-texture = ExtResource("5_ryrav")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=576443871]
-position = Vector2(290, 163.25)
-scale = Vector2(1, 21.433332)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429111834]
-position = Vector2(-3, 12.375583)
-shape = SubResource("RectangleShape2D_pgyqk")
-
-[node name="Flag" type="Sprite2D" parent="." unique_id=695324369]
-position = Vector2(555, 144)
-texture = ExtResource("6_eow3j")
