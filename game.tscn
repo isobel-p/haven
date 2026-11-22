@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://bqgao1x5k045b" path="res://paddle2.tscn" id="2_ryrav"]
 [ext_resource type="Texture2D" uid="uid://iwn83jsfmhal" path="res://Raquet1.jpg" id="4_ryrav"]
+[ext_resource type="PackedScene" uid="uid://gaacsbtcxs3r" path="res://coin.tscn" id="6_j5wjh"]
 [ext_resource type="Texture2D" uid="uid://cwyw0e2npgmky" path="res://Enemy.jpg" id="6_ryrav"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt5sy"]
@@ -76,29 +77,32 @@ position = Vector2(1003, 182)
 [node name="Big Paddle" parent="." unique_id=1004621300 instance=ExtResource("2_ryrav")]
 position = Vector2(1, 304)
 
+[node name="Coin" parent="." unique_id=1859814224 instance=ExtResource("6_j5wjh")]
+position = Vector2(279, 133)
+
 [node name="Medium Paddle" parent="." unique_id=763567287 instance=ExtResource("2_ryrav")]
 position = Vector2(587, 300)
 
 [node name="Small Paddle2" parent="." unique_id=1228452832 instance=ExtResource("2_ryrav")]
 position = Vector2(1176, 302)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=186802152]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=186802152]
 script = ExtResource("2_fc0e3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1732930530]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1732930530]
 shape = SubResource("CircleShape2D_yt5sy")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=974702919]
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=974702919]
 scale = Vector2(1.3333333, 1.3333333)
 texture = ExtResource("2_feb5d")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1671795167]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1671795167]
 position_smoothing_enabled = true
 position_smoothing_speed = 1.0
 
-[node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=958200858]
+[node name="Area2D" type="Area2D" parent="Player" unique_id=958200858]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=849772115]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/Area2D" unique_id=849772115]
 shape = SubResource("CircleShape2D_yt5sy")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1354107092]
