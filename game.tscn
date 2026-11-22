@@ -58,14 +58,20 @@ position = Vector2(361, 136)
 [node name="Spike5" parent="." unique_id=177676196 instance=ExtResource("2_eow3j")]
 position = Vector2(722, 272)
 
-[node name="Spike6" parent="." unique_id=1642012500 instance=ExtResource("2_eow3j")]
-position = Vector2(792, 142)
-
 [node name="Spike7" parent="." unique_id=339223932 instance=ExtResource("2_eow3j")]
-position = Vector2(900, 91)
+position = Vector2(906, 86)
 
 [node name="Spike8" parent="." unique_id=16542719 instance=ExtResource("2_eow3j")]
-position = Vector2(994, 227)
+position = Vector2(815, 61)
+
+[node name="Spike9" parent="." unique_id=1640776013 instance=ExtResource("2_eow3j")]
+position = Vector2(680, 43)
+
+[node name="Spike10" parent="." unique_id=1749167643 instance=ExtResource("2_eow3j")]
+position = Vector2(1064, 234)
+
+[node name="Spike11" parent="." unique_id=1704230753 instance=ExtResource("2_eow3j")]
+position = Vector2(1003, 182)
 
 [node name="Big Paddle" parent="." unique_id=1004621300 instance=ExtResource("2_ryrav")]
 position = Vector2(1, 304)
