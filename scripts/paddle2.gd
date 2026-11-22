@@ -13,7 +13,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
-	print(position.x)
 	if position.x>300:
 		speed = -2
 	elif position.x<0:
@@ -22,6 +21,4 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
-		var y_delta = position.y - body.position.y
-		var x_delta = body.position.x - position.x
 		body.velocity.y = -600
