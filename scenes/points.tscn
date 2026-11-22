@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dbbbrjcb6n0t8"]
 
-[ext_resource type="Script" uid="uid://pl80wi7b48fs" path="res://points.gd" id="1_n31ie"]
+[ext_resource type="Script" uid="uid://pl80wi7b48fs" path="res://scripts/points.gd" id="1_qq43p"]
 
 [node name="Points" type="Node2D" unique_id=643008367]
-script = ExtResource("1_n31ie")
+script = ExtResource("1_qq43p")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=311037742]
 offset_right = 40.0

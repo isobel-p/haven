@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bat22m584w1yi"
-path="res://.godot/imported/Flag.jpg-9f47bc0988bbc6c1d539da6adb9aa521.ctex"
+uid="uid://dr7hhe5gh01gs"
+path="res://.godot/imported/Coin.jpg-b8d0ff556c65b9274be3bb848a431435.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Flag.jpg"
-dest_files=["res://.godot/imported/Flag.jpg-9f47bc0988bbc6c1d539da6adb9aa521.ctex"]
+source_file="res://assets/Coin.jpg"
+dest_files=["res://.godot/imported/Coin.jpg-b8d0ff556c65b9274be3bb848a431435.ctex"]
 
 [params]
 

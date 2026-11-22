@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://iwn83jsfmhal"
-path="res://.godot/imported/Raquet1.jpg-1242cf341fd82ef1e0c965b98f8eb283.ctex"
+path="res://.godot/imported/Raquet1.jpg-92b49318f0f955eaff576c6dac1bbd35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Raquet1.jpg"
-dest_files=["res://.godot/imported/Raquet1.jpg-1242cf341fd82ef1e0c965b98f8eb283.ctex"]
+source_file="res://assets/Raquet1.jpg"
+dest_files=["res://.godot/imported/Raquet1.jpg-92b49318f0f955eaff576c6dac1bbd35.ctex"]
 
 [params]
 

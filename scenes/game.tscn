@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://bdljtg72p7ljc"]
 
-[ext_resource type="Texture2D" uid="uid://d3m7gnasqvp5f" path="res://Table.jpg" id="1_eow3j"]
-[ext_resource type="PackedScene" uid="uid://cnqgbwkp73ixq" path="res://spike.tscn" id="2_eow3j"]
+[ext_resource type="Texture2D" uid="uid://d3m7gnasqvp5f" path="res://assets/Table.jpg" id="1_eow3j"]
+[ext_resource type="PackedScene" uid="uid://cnqgbwkp73ixq" path="res://scenes/spike.tscn" id="2_eow3j"]
 [ext_resource type="Script" uid="uid://cdkivmcm0qs" path="res://scripts/character_body_2d.gd" id="2_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_feb5d"]
-[ext_resource type="PackedScene" uid="uid://bqgao1x5k045b" path="res://paddle2.tscn" id="2_ryrav"]
-[ext_resource type="Texture2D" uid="uid://iwn83jsfmhal" path="res://Raquet1.jpg" id="4_ryrav"]
-[ext_resource type="PackedScene" uid="uid://gaacsbtcxs3r" path="res://coin.tscn" id="6_j5wjh"]
-[ext_resource type="Texture2D" uid="uid://cwyw0e2npgmky" path="res://Enemy.jpg" id="6_ryrav"]
+[ext_resource type="PackedScene" uid="uid://bqgao1x5k045b" path="res://scenes/paddle2.tscn" id="2_ryrav"]
+[ext_resource type="Texture2D" uid="uid://iwn83jsfmhal" path="res://assets/Raquet1.jpg" id="4_ryrav"]
+[ext_resource type="PackedScene" uid="uid://gaacsbtcxs3r" path="res://scenes/coin.tscn" id="6_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://cwyw0e2npgmky" path="res://assets/Enemy.jpg" id="6_ryrav"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt5sy"]
 radius = 9.055386
