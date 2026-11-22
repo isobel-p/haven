@@ -1,9 +1,11 @@
-[gd_scene format=3 uid="uid://bdljtg72p7ljc"]
+[gd_scene format=4 uid="uid://bdljtg72p7ljc"]
 
+[ext_resource type="Texture2D" uid="uid://bf81oq12rnla6" path="res://assets/Table.jpg" id="1_7jktm"]
 [ext_resource type="Script" uid="uid://cdkivmcm0qs" path="res://character_body_2d.gd" id="2_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://8k12gaxmjrak" path="res://paddle.tscn" id="4_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://iwn83jsfmhal" path="res://Raquet1.jpg" id="4_ryrav"]
+[ext_resource type="Texture2D" uid="uid://crrs8you66x3a" path="res://assets/Line.jpg" id="5_ryrav"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt5sy"]
 
@@ -48,8 +50,17 @@ texture = ExtResource("2_feb5d")
 position = Vector2(1, -1)
 tile_set = SubResource("TileSet_j7hea")
 format = 2
-layer_0/tile_data = PackedInt32Array(131072, 0, 0, 131073, 0, 1342177280, 196609, 0, 805306368, 196608, 0, 1610612736, 196611, 0, 1610612736, 131075, 0, 0, 131076, 0, 1342177280, 196612, 0, 805306368, 196615, 0, 805306368, 196614, 0, 1610612736, 131078, 0, 0, 131079, 0, 1342177280, 327689, 0, 1342177280, 327688, 0, 0, 393224, 0, 1610612736, 393225, 0, 805306368, 589837, 0, 805306368, 524301, 0, 1342177280, 524300, 0, 0, 589836, 0, 1610612736, 851982, 0, 0, 851983, 0, 1342177280, 917519, 0, 805306368, 917518, 0, 1610612736, 1114137, 0, 0, 1114138, 0, 1342177280, 1179674, 0, 805306368, 1179673, 0, 1610612736, 720922, 0, 1610612736, 655386, 0, 0, 655387, 0, 1342177280, 720923, 0, 805306368, 262172, 0, 805306368, 196636, 0, 1342177280, 196635, 0, 0, 262171, 0, 1610612736)
+
+[node name="Layer1" type="TileMapLayer" parent="TileMap" unique_id=339631563]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAFABAAMAAAAAAAAAADAAAAMAAAAAAAAAAGADAAMAAAAAAAAAAGADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAFAEAAMAAAAAAAAAADAHAAMAAAAAAAAAADAGAAMAAAAAAAAAAGAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAFAJAAUAAAAAAAAAAFAIAAUAAAAAAAAAAAAIAAYAAAAAAAAAAGAJAAYAAAAAAAAAADANAAkAAAAAAAAAADANAAgAAAAAAAAAAFAMAAgAAAAAAAAAAAAMAAkAAAAAAAAAAGAOAA0AAAAAAAAAAAAPAA0AAAAAAAAAAFAPAA4AAAAAAAAAADAOAA4AAAAAAAAAAGAZABEAAAAAAAAAAAAaABEAAAAAAAAAAFAaABIAAAAAAAAAADAZABIAAAAAAAAAAGAaAAsAAAAAAAAAAGAaAAoAAAAAAAAAAAAbAAoAAAAAAAAAAFAbAAsAAAAAAAAAADAcAAQAAAAAAAAAADAcAAMAAAAAAAAAAFAbAAMAAAAAAAAAAAAbAAQAAAAAAAAAAGA=")
+tile_set = SubResource("TileSet_j7hea")
 
 [node name="Line" type="Sprite2D" parent="." unique_id=629638475]
 position = Vector2(292, 161.5)
 scale = Vector2(0.96666664, 21.666668)
+
+[node name="Line2" type="Sprite2D" parent="." unique_id=1953201802]
+position = Vector2(290, 163.25)
+scale = Vector2(1, 21.433332)
+texture = ExtResource("5_ryrav")
