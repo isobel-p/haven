@@ -13,6 +13,8 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	else:
+		jumps = 2
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and jumps > 0:
@@ -32,3 +34,11 @@ func _physics_process(delta: float) -> void:
 
 func on_powerup():
 	print("powerup")
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		var y_delta = position.y - body.position.y
+		var x_delta = body.position.x - position.x
+		if y_delta > 130:
+			body.jump()

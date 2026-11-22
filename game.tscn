@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cdkivmcm0qs" path="res://character_body_2d.gd" id="2_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_feb5d"]
+[ext_resource type="PackedScene" uid="uid://bqgao1x5k045b" path="res://paddle2.tscn" id="2_ryrav"]
 [ext_resource type="PackedScene" uid="uid://8k12gaxmjrak" path="res://paddle.tscn" id="4_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://iwn83jsfmhal" path="res://Raquet1.jpg" id="4_ryrav"]
 [ext_resource type="Texture2D" uid="uid://crrs8you66x3a" path="res://assets/Line.jpg" id="5_ryrav"]
@@ -33,6 +34,8 @@ stretch_mode = 1
 
 [node name="Paddle" parent="." unique_id=1594035442 instance=ExtResource("4_fc0e3")]
 
+[node name="Paddle2" parent="." unique_id=812565973 instance=ExtResource("2_ryrav")]
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=186802152]
 script = ExtResource("2_fc0e3")
 
@@ -44,6 +47,11 @@ scale = Vector2(1.3333333, 1.3333333)
 texture = ExtResource("2_feb5d")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1671795167]
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=958200858]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=849772115]
+shape = SubResource("CircleShape2D_yt5sy")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1354107092]
 position = Vector2(1, -1)
@@ -63,3 +71,5 @@ scale = Vector2(0.96666664, 21.666668)
 position = Vector2(290, 163.25)
 scale = Vector2(1, 21.433332)
 texture = ExtResource("5_ryrav")
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
