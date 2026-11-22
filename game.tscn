@@ -27,3 +27,5 @@ shape = SubResource("CircleShape2D_yt5sy")
 position = Vector2(3.5762787e-07, 3.5762787e-07)
 scale = Vector2(1.3333333, 1.3333333)
 texture = ExtResource("2_feb5d")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1671795167]
