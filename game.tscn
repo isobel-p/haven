@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bdljtg72p7ljc"]
 
-[ext_resource type="Texture2D" uid="uid://bf81oq12rnla6" path="res://assets/Table.jpg" id="1_7jktm"]
+[ext_resource type="Texture2D" uid="uid://d3m7gnasqvp5f" path="res://Table.jpg" id="1_eow3j"]
 [ext_resource type="PackedScene" uid="uid://cnqgbwkp73ixq" path="res://spike.tscn" id="2_eow3j"]
 [ext_resource type="Script" uid="uid://cdkivmcm0qs" path="res://scripts/character_body_2d.gd" id="2_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_feb5d"]
@@ -35,13 +35,13 @@ sources/3 = SubResource("TileSetAtlasSource_eow3j")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -3.0
-offset_top = -3.0
-offset_right = 849.0
-offset_bottom = -318.0
+offset_left = -884.0
+offset_top = -644.0
+offset_right = 1635.0
+offset_bottom = 425.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_7jktm")
+texture = ExtResource("1_eow3j")
 stretch_mode = 1
 
 [node name="Spike" parent="." unique_id=812565973 instance=ExtResource("2_eow3j")]
@@ -96,13 +96,13 @@ position = Vector2(1294, 52)
 position = Vector2(1230, 29)
 
 [node name="Spike20" parent="." unique_id=669591423 instance=ExtResource("2_eow3j")]
-position = Vector2(1464, 84)
+position = Vector2(1461, 66)
 
 [node name="Spike21" parent="." unique_id=916420818 instance=ExtResource("2_eow3j")]
-position = Vector2(1566, 82)
+position = Vector2(1565, 67)
 
 [node name="Spike22" parent="." unique_id=952203893 instance=ExtResource("2_eow3j")]
-position = Vector2(1515, 82)
+position = Vector2(1514, 274)
 
 [node name="Big Paddle" parent="." unique_id=1004621300 instance=ExtResource("2_ryrav")]
 position = Vector2(1, 304)
@@ -139,6 +139,7 @@ shape = SubResource("CircleShape2D_yt5sy")
 position = Vector2(1, -1)
 tile_set = SubResource("TileSet_j7hea")
 format = 2
+layer_0/tile_data = PackedInt32Array(34, 2, 0)
 
 [node name="Layer1" type="TileMapLayer" parent="TileMap" unique_id=339631563]
 use_parent_material = true
