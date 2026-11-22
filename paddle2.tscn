@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bqgao1x5k045b"]
 
-[ext_resource type="Script" uid="uid://b7vuf23ogna00" path="res://paddle2.gd" id="1_bm8fl"]
+[ext_resource type="Script" uid="uid://b7vuf23ogna00" path="res://scripts/paddle2.gd" id="1_bm8fl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7i1h"]
-size = Vector2(254, 40)
+size = Vector2(265, 47)
 
 [node name="Paddle2" type="Node2D" unique_id=812565973]
 
@@ -21,7 +21,7 @@ shape = SubResource("RectangleShape2D_i7i1h")
 [node name="Area2D" type="Area2D" parent="AnimatableBody2D" unique_id=1283164990]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="AnimatableBody2D/Area2D" unique_id=1354610395]
-position = Vector2(127, 20)
+position = Vector2(126.5, 19.5)
 shape = SubResource("RectangleShape2D_i7i1h")
 
 [connection signal="body_entered" from="AnimatableBody2D/Area2D" to="AnimatableBody2D" method="_on_area_2d_body_entered"]
