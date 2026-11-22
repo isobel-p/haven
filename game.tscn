@@ -1,11 +1,56 @@
 [gd_scene format=3 uid="uid://bdljtg72p7ljc"]
 
-[ext_resource type="PackedScene" uid="uid://8k12gaxmjrak" path="res://paddle.tscn" id="1_e2o6t"]
-[ext_resource type="PackedScene" uid="uid://384spmua6cy2" path="res://player.tscn" id="2_feb5d"]
+[ext_resource type="Texture2D" path="res://Table.jpg" id="1_7jktm"]
+[ext_resource type="Script" uid="uid://cdkivmcm0qs" path="res://character_body_2d.gd" id="2_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://bwaedd2nk32yo" path="res://assets/Player.jpg" id="2_feb5d"]
+[ext_resource type="Texture2D" uid="uid://iwn83jsfmhal" path="res://Raquet1.jpg" id="4_ryrav"]
+[ext_resource type="Texture2D" path="res://Line.jpg" id="5_eow3j"]
 
-[node name="Game" type="Node2D" unique_id=1198735491]
+[sub_resource type="CircleShape2D" id="CircleShape2D_yt5sy"]
 
-[node name="Paddle" parent="." unique_id=1594035442 instance=ExtResource("1_e2o6t")]
-position = Vector2(132, 15)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5wjh"]
+texture = ExtResource("4_ryrav")
+texture_region_size = Vector2i(20, 20)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[node name="Player" parent="." unique_id=845635383 instance=ExtResource("2_feb5d")]
+[sub_resource type="TileSet" id="TileSet_j7hea"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_j5wjh")
+
+[node name="Node2D" type="Node" unique_id=845635383]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=611853722]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_right = -576.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7jktm")
+stretch_mode = 1
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=186802152]
+script = ExtResource("2_fc0e3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1732930530]
+shape = SubResource("CircleShape2D_yt5sy")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=974702919]
+scale = Vector2(1.3333333, 1.3333333)
+texture = ExtResource("2_feb5d")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1671795167]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1354107092]
+position = Vector2(1, -1)
+tile_set = SubResource("TileSet_j7hea")
+format = 2
+layer_0/tile_data = PackedInt32Array(131072, 0, 0, 131073, 0, 1342177280, 196609, 0, 805306368, 196608, 0, 1610612736, 196611, 0, 1610612736, 131075, 0, 0, 131076, 0, 1342177280, 196612, 0, 805306368, 196615, 0, 805306368, 196614, 0, 1610612736, 131078, 0, 0, 131079, 0, 1342177280, 327689, 0, 1342177280, 327688, 0, 0, 393224, 0, 1610612736, 393225, 0, 805306368, 589837, 0, 805306368, 524301, 0, 1342177280, 524300, 0, 0, 589836, 0, 1610612736, 851982, 0, 0, 851983, 0, 1342177280, 917519, 0, 805306368, 917518, 0, 1610612736, 1114137, 0, 0, 1114138, 0, 1342177280, 1179674, 0, 805306368, 1179673, 0, 1610612736, 720922, 0, 1610612736, 655386, 0, 0, 655387, 0, 1342177280, 720923, 0, 805306368, 262172, 0, 805306368, 196636, 0, 1342177280, 196635, 0, 0, 262171, 0, 1610612736)
+
+[node name="Line" type="Sprite2D" parent="." unique_id=629638475]
+position = Vector2(292, 161.5)
+scale = Vector2(0.96666664, 21.666668)
+texture = ExtResource("5_eow3j")
