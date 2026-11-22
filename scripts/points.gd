@@ -15,4 +15,5 @@ func _process(delta: float) -> void:
 	score.text = text
 
 func _on_point() -> void:
+	print("More points")
 	points += 1
