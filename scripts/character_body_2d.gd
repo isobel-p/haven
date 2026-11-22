@@ -40,7 +40,6 @@ func on_powerup():
 	print("powerup")
 
 
-
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		var y_delta = position.y - body.position.y
