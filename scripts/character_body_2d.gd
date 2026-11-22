@@ -5,6 +5,7 @@ var jumps: int = 2
 
 func respawn() -> void:
 	$Error.play()
+	$Camera2D.add_trauma(1)
 	print("Respawning...")
 	global_position.x = 17.5
 	global_position.y = 0

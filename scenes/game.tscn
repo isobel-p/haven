@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://iwn83jsfmhal" path="res://assets/Raquet1.jpg" id="4_ryrav"]
 [ext_resource type="PackedScene" uid="uid://gaacsbtcxs3r" path="res://scenes/coin.tscn" id="6_j5wjh"]
 [ext_resource type="Texture2D" uid="uid://cwyw0e2npgmky" path="res://assets/Enemy.jpg" id="6_ryrav"]
+[ext_resource type="Script" uid="uid://c4463gfti3d8b" path="res://scenes/camera_2d.gd" id="7_ir15t"]
 [ext_resource type="Texture2D" uid="uid://umvjo50quqha" path="res://assets/Brick.jpg" id="8_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://pkq34yul836r" path="res://assets/Text.jpg" id="10_dinhu"]
 [ext_resource type="Texture2D" uid="uid://c4g5g7icfaidc" path="res://assets/Star.jpg" id="11_kvuet"]
@@ -180,6 +181,7 @@ texture = ExtResource("2_feb5d")
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1671795167]
 position_smoothing_enabled = true
 position_smoothing_speed = 1.0
+script = ExtResource("7_ir15t")
 
 [node name="Area2D" type="Area2D" parent="Player" unique_id=958200858]
 
@@ -187,9 +189,8 @@ position_smoothing_speed = 1.0
 shape = SubResource("CircleShape2D_yt5sy")
 
 [node name="Error" type="AudioStreamPlayer" parent="Player" unique_id=1980540705]
-unique_name_in_owner = true
 stream = ExtResource("13_kvuet")
-volume_db = 4.837
+volume_db = 4.031
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1354107092]
 position = Vector2(1, -1)
