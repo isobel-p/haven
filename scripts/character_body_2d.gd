@@ -38,8 +38,6 @@ func _physics_process(delta: float) -> void:
 
 func on_powerup():
 	print("powerup")
-=======
-<<<<<<<< HEAD:character_body_2d.gd
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -48,6 +46,3 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		var x_delta = body.position.x - position.x
 		if y_delta > 130:
 			body.jump()
-========
->>>>>>>> 861a1efc7ff10300c3a585ab4919b007eb09b293:scripts/character_body_2d.gd
->>>>>>> 861a1efc7ff10300c3a585ab4919b007eb09b293
