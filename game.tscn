@@ -52,6 +52,9 @@ position = Vector2(1, 304)
 [node name="Medium Paddle" parent="." unique_id=763567287 instance=ExtResource("2_ryrav")]
 position = Vector2(587, 300)
 
+[node name="Small Paddle2" parent="." unique_id=1228452832 instance=ExtResource("2_ryrav")]
+position = Vector2(1176, 302)
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=186802152]
 script = ExtResource("2_fc0e3")
 
